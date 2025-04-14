@@ -58,4 +58,8 @@ public class BossEnemy : MonoBehaviour
             }
         }
     }
+
+    //Boss Charges at the Player every couple of seconds
+
+    //Boss shoots projectiles in a direction after a cooldown
 }
