@@ -14,6 +14,7 @@ public class FlyingEnemy : MonoBehaviour
     public GameObject UpPoint;
     public int Speed;
     public bool GoingDown;
+    public int Health = 1;
 
     private Vector3 DownStart;
     private Vector3 UpStart;
