@@ -13,6 +13,7 @@ public class BossEnemy : MonoBehaviour
     public GameObject RightPoint;
     public int Speed;
     public bool GoingLeft;
+    public int Health = 10;
 
     private Vector3 leftPos;
     private Vector3 rightPos;
