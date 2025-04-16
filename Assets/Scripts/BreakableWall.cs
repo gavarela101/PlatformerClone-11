@@ -4,15 +4,25 @@ using UnityEngine;
 
 public class BreakableWall : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public int Health = 5;
+
+    public void OnTriggerEnter(Collider other)
     {
-        
+        if (other.tag == "bullet")
+        {
+            DoorHealth();
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void DoorHealth()
     {
-        
+        //have Enemy lose a life 
+        Health--;
+
+        //check if Enemy has zero health 
+        if (Health <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }
