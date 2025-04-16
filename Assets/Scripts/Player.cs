@@ -31,4 +31,13 @@ public class Player : MonoBehaviour
             transform.position += Vector3.right * Speed * Time.deltaTime;
         }
     }
+
+    private void Jump()
+    {
+    if (Input.GetKey(KeyCode.W))
+        {
+            transform.rotation = Quaternion.Euler(0, 180, 0);
+            transform.position += Vector3.up * Speed * Time.deltaTime;
+        }
+    }
 }
