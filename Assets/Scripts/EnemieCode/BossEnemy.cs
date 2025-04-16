@@ -60,7 +60,20 @@ public class BossEnemy : MonoBehaviour
         }
     }
 
-    //Boss Charges at the Player every couple of seconds
+    //Subtracts enemy health when shot by player
+    public void LoseHealth()
+    {
+        //have Enemy lose a life 
+        Health--;
+
+        //check if Enemy has zero health 
+        if (Health <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
 
     //Boss shoots projectiles in a direction after a cooldown
+
+    //Boss Speeds up after losing certain amount of health
 }

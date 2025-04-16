@@ -25,4 +25,17 @@ public class Deadly : MonoBehaviour
             other.gameObject.GetComponent<Player>().LoseLife();
         }
     }
+
+    //Subtracts enemy health when shot by player
+    public void LoseHealth()
+    {
+        //have Enemy lose a life 
+        Health--;
+
+        //check if Enemy has zero health 
+        if (Health <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
 }

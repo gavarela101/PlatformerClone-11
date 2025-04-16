@@ -62,9 +62,10 @@ public class EnemyMovement : MonoBehaviour
         }
     }
 
+    //Subtracts enemy health when shot by player
     public void LoseHealth()
     {
-        //have player lose a life 
+        //have Enemy lose a life 
         Health--;
 
         //check if Enemy has zero health 
