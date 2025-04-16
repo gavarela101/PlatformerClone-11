@@ -14,6 +14,7 @@ public class FlyingEnemy : MonoBehaviour
     public GameObject UpPoint;
     public int Speed;
     public bool GoingDown;
+    public int Health = 1;
 
     private Vector3 DownStart;
     private Vector3 UpStart;
@@ -57,6 +58,19 @@ public class FlyingEnemy : MonoBehaviour
                 //moves the enemy up
                 transform.position += Vector3.up * Time.deltaTime * Speed;
             }
+        }
+    }
+
+    //Subtracts enemy health when shot by player
+    public void LoseHealth()
+    {
+        //have Enemy lose a life 
+        Health--;
+
+        //check if Enemy has zero health 
+        if (Health <= 0)
+        {
+            Destroy(gameObject);
         }
     }
 }

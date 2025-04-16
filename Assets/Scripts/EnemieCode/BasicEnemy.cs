@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static Cinemachine.DocumentationSortingAttribute;
+using UnityEngine.SceneManagement;
 /*
  * Gabriel Varela
  * updated 4/9/20
@@ -13,6 +15,7 @@ public class EnemyMovement : MonoBehaviour
     public GameObject RightPoint;
     public int Speed;
     public bool GoingLeft;
+    public int Health = 1;
 
     private Vector3 leftPos;
     private Vector3 rightPos;
@@ -56,6 +59,19 @@ public class EnemyMovement : MonoBehaviour
                 //moves the enemy to the right
                 transform.position += Vector3.right * Time.deltaTime * Speed;
             }
+        }
+    }
+
+    //Subtracts enemy health when shot by player
+    public void LoseHealth()
+    {
+        //have Enemy lose a life 
+        Health--;
+
+        //check if Enemy has zero health 
+        if (Health <= 0)
+        {
+            Destroy(gameObject);
         }
     }
 }

@@ -34,7 +34,7 @@ public class Player : MonoBehaviour
 
     private void Jump()
     {
-    if (Input.GetKey(KeyCode.W))
+    if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
         {
             transform.rotation = Quaternion.Euler(0, 180, 0);
             transform.position += Vector3.up * Speed * Time.deltaTime;
