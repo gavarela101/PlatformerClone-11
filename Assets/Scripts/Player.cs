@@ -1,12 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+/*
+ * Jayden Saelee Chao
+ * Last Updated: 4/16/2025
+ * Controls player movement, jumping
+ */
 
 public class Player : MonoBehaviour
 {
     public float Speed = 1f;
+    private new Rigidbody rigidbody;
+    public float jumpForce = 6f;
 
-    // Update is called once per frame
+    void Start()
+    {
+        rigidbody = GetComponent<Rigidbody>();
+    }
+
     void FixedUpdate()
     {
         Move();
@@ -32,10 +43,9 @@ public class Player : MonoBehaviour
 
     private void Jump()
     {
-    if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow) && OnGround())
+    if (Input.GetKeyDown(KeyCode.W) && OnGround() || Input.GetKeyDown(KeyCode.UpArrow) && OnGround())
         {
-            transform.rotation = Quaternion.Euler(0, 180, 0);
-            transform.position += Vector3.up * Speed * Time.deltaTime;
+            rigidbody.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         }
     }
 
@@ -45,9 +55,9 @@ public class Player : MonoBehaviour
 
         RaycastHit hit;
 
-        if (Physics.Raycast(transform.position, Vector3.down, out hit, 1.2f))
+        if (Physics.Raycast(transform.position, Vector3.down, out hit, 1.5f))
         {
-            onGround = true;
+         onGround = true;
         }
 
         return onGround;
