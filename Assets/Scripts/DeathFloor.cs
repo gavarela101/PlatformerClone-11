@@ -2,17 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ * Gabriel Varela
+ * updated 4/17/20
+ * Handles all coding for the Flying enemy
+*/
+
 public class DeathFloor : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public int death = 200; 
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter(Collider other)
     {
-        
+        if (other.GetComponent<Player>())
+        {
+            other.GetComponent<Player>().health -= death;
+        }
     }
 }

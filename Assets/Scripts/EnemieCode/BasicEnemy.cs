@@ -16,6 +16,7 @@ public class EnemyMovement : MonoBehaviour
     public int Speed;
     public bool GoingLeft;
     public int Health = 1;
+    public int damage = 5; 
 
     private Vector3 leftPos;
     private Vector3 rightPos;
@@ -72,6 +73,17 @@ public class EnemyMovement : MonoBehaviour
         if (Health <= 0)
         {
             Destroy(gameObject);
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.GetComponent<Player>())
+        {
+            if (other.GetComponent<Player>().health >= 0)
+            {
+                other.GetComponent<Player>().health -= damage;
+            }
         }
     }
 }

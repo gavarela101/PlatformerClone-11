@@ -14,6 +14,7 @@ public class BossEnemy : MonoBehaviour
     public int Speed;
     public bool GoingLeft;
     public int Health = 10;
+    public int damage = 15;
    
     public GameObject projectilePrefab;
     public float timeBetweenShots;
@@ -94,6 +95,18 @@ public class BossEnemy : MonoBehaviour
         if (Health <= 5)
         {
             Speed = Speed * 2;
+        }
+    }
+
+    //Damage against the player
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.GetComponent<Player>())
+        {
+            if (other.GetComponent<Player>().health >= 0)
+            {
+                other.GetComponent<Player>().health -= damage;
+            }
         }
     }
 }

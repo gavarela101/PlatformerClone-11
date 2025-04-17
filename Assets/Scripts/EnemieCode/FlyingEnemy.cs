@@ -15,6 +15,7 @@ public class FlyingEnemy : MonoBehaviour
     public int Speed;
     public bool GoingDown;
     public int Health = 1;
+    public int damage = 10;
 
     private Vector3 DownStart;
     private Vector3 UpStart;
@@ -71,6 +72,17 @@ public class FlyingEnemy : MonoBehaviour
         if (Health <= 0)
         {
             Destroy(gameObject);
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.GetComponent<Player>())
+        {
+            if (other.GetComponent<Player>().health >= 0)
+            {
+                other.GetComponent<Player>().health -= damage;
+            }
         }
     }
 }
