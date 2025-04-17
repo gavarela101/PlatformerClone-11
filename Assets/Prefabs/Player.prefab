@@ -228,6 +228,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 5
+  jumpForce: 9
+  maxHealth: 99
+  health: 99
 --- !u!54 &5211495364622100399
 Rigidbody:
   m_ObjectHideFlags: 0

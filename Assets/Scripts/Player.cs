@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 /*
  * Jayden Saelee Chao
@@ -10,9 +11,11 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public float Speed = 1f;
-    private new Rigidbody rigidbody;
-    public float jumpForce = 6f;
+    public float jumpForce = 9f;
+    public int maxHealth = 99;
+    public int health = 99;
 
+    private new Rigidbody rigidbody;
     void Start()
     {
         rigidbody = GetComponent<Rigidbody>();
