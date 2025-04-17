@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8271298936947033807}
   - component: {fileID: 4547681142617345849}
-  - component: {fileID: 1749222765488770673}
+  - component: {fileID: 7437473700459378281}
   m_Layer: 0
   m_Name: Health pack
   m_TagString: Untagged
@@ -57,7 +57,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1749222765488770673
+--- !u!114 &7437473700459378281
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -69,6 +69,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47cbead7dd491ee419506a29c232c345, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  heal: 25
 --- !u!1 &1662659790742607751
 GameObject:
   m_ObjectHideFlags: 0

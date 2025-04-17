@@ -10,7 +10,7 @@ using UnityEngine;
 
 public class HealthPack : MonoBehaviour
 {
-    public int heal = 50;
+    public int heal = 25;
     private void OnTriggerEnter(Collider other)
     {
         if (other.GetComponent<Player>())
