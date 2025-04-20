@@ -14,11 +14,9 @@ public class UiManager : MonoBehaviour
 {
     public Player player;
     public TMP_Text healthText;
-    public TMP_Text livesText;
 
     void Update()
     {
         healthText.text = "Health: " + player.health;
-        livesText.text = "Lives: " + player.lives;
     }
 }
