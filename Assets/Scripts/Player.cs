@@ -28,6 +28,8 @@ public class Player : MonoBehaviour
     private float currentRotationY;
     private new Rigidbody rigidbody;
 
+    public string lives { get; internal set; }
+
     void Start()
     {
         rigidbody = GetComponent<Rigidbody>();
