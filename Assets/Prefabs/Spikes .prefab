@@ -117,6 +117,7 @@ GameObject:
   - component: {fileID: 4154981011008492053}
   - component: {fileID: 7377637139631859815}
   - component: {fileID: 3426885489417565932}
+  - component: {fileID: 6051928310079622289}
   m_Layer: 0
   m_Name: 'Spikes '
   m_TagString: Untagged
@@ -212,6 +213,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6051928310079622289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5839567913629886073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bd3ca77690c5204787ef0b405d68d82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 100
 --- !u!1 &7620551579186249776
 GameObject:
   m_ObjectHideFlags: 0

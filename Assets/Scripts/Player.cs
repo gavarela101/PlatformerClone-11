@@ -29,6 +29,8 @@ public class Player : MonoBehaviour
     private GameObject bullet;
     private new Rigidbody rigidbody;
 
+    public string lives { get; internal set; }
+
     void Start()
     {
         rigidbody = GetComponent<Rigidbody>();
