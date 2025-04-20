@@ -12,11 +12,10 @@ GameObject:
   - component: {fileID: 369475031356611792}
   - component: {fileID: 6759319569835082778}
   - component: {fileID: 2009151821798570719}
-  - component: {fileID: 7796886612997865368}
   - component: {fileID: 958847569879398076}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Boss
-  m_TagString: Untagged
+  m_TagString: Enemies
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -109,18 +108,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7796886612997865368
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 620242898180218069}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 866459c357714f34a91877daa214462c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &958847569879398076
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137,6 +124,11 @@ MonoBehaviour:
   RightPoint: {fileID: 2947664350850659222}
   Speed: 3
   GoingLeft: 0
+  Health: 10
+  damage: 35
+  projectilePrefab: {fileID: 0}
+  timeBetweenShots: 0
+  startDelay: 0
 --- !u!1 &2947664350850659222
 GameObject:
   m_ObjectHideFlags: 0
@@ -146,7 +138,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4356654205493058855}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Right
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -177,7 +169,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6052650264280069382}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Left
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}

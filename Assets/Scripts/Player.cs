@@ -29,8 +29,6 @@ public class Player : MonoBehaviour
     private GameObject bullet;
     private new Rigidbody rigidbody;
 
-    public string lives { get; internal set; }
-
     void Start()
     {
         rigidbody = GetComponent<Rigidbody>();
@@ -38,18 +36,14 @@ public class Player : MonoBehaviour
         bullet = LaserPre;
     }
 
-        void FixedUpdate()
+    void FixedUpdate()
     {
         Move();
     }
     void Update()
     {
         Jump();
-
-        if (transform.position.y <= killHeight)
-        {
-            Death();
-        }
+        Death();
 
         if (Time.time >= nextFireTime && Input.GetKeyDown(KeyCode.Space))
         {
@@ -89,6 +83,11 @@ public class Player : MonoBehaviour
     private void Death()
     {
         if (health <= 0)
+        {
+            SceneManager.LoadScene(2);
+        }
+
+        if (transform.position.y < killHeight)
         {
             SceneManager.LoadScene(2);
         }
@@ -136,5 +135,20 @@ public class Player : MonoBehaviour
     public void SwitchPrefabs()
     {
         bullet = HeavyLaserPre;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Enemies")
+        {
+         StartCoroutine(IFrames());
+        } 
+    } 
+
+    IEnumerator IFrames()
+    {
+        Physics.IgnoreLayerCollision(6, 7, true);
+        yield return new WaitForSeconds(5);
+        Physics.IgnoreLayerCollision(6, 7, false);
     }
 }

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8020205368365589561}
   - component: {fileID: 167276462904919069}
   - component: {fileID: 180361339439387819}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -119,7 +119,7 @@ GameObject:
   - component: {fileID: 4045418149739851359}
   - component: {fileID: 9064286518295503318}
   - component: {fileID: 5211495364622100399}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -235,6 +235,7 @@ MonoBehaviour:
   fireRate: 0.5
   killHeight: -6
   LaserPre: {fileID: 8789362296556596668, guid: 2f9f94c2225ebb0448ad06c91defbce0, type: 3}
+  HeavyLaserPre: {fileID: 0}
 --- !u!54 &5211495364622100399
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2888489909345501239}
   - component: {fileID: 6358857109650496330}
   - component: {fileID: 4174644516412320099}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Spikes (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -118,9 +118,9 @@ GameObject:
   - component: {fileID: 7377637139631859815}
   - component: {fileID: 3426885489417565932}
   - component: {fileID: 6051928310079622289}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: 'Spikes '
-  m_TagString: Untagged
+  m_TagString: Enemies
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -238,7 +238,7 @@ GameObject:
   - component: {fileID: 1003784323522889931}
   - component: {fileID: 7743738419686135941}
   - component: {fileID: 8555004511317250826}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Spikes (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

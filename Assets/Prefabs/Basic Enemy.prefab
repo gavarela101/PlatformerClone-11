@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 1583913133387088390}
   - component: {fileID: 788663445423269822}
   - component: {fileID: 6015027059792420454}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Basic Enemy
-  m_TagString: Untagged
+  m_TagString: Enemies
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -135,7 +135,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 79058943136703084}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: rightPoint
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -166,7 +166,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 902157184726231677}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: leftPoint
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}

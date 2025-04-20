@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 1606056043234869665}
   - component: {fileID: 3999760870046632941}
   - component: {fileID: 4186820533352149899}
-  - component: {fileID: 170800811852143965}
   m_Layer: 0
   m_Name: BossShot
   m_TagString: BossShot
@@ -121,15 +120,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 7
   goingLeft: 0
---- !u!114 &170800811852143965
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1036690346469676618}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 866459c357714f34a91877daa214462c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  damage: 20
