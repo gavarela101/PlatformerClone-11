@@ -10,7 +10,7 @@ using UnityEngine;
 
 public class PowerupJump : MonoBehaviour
 {
-    public float jumpUp = 5f;
+    public float jumpUp = 3f;
 
     private void OnTriggerEnter(Collider other)
     {

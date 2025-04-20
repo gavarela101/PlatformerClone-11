@@ -19,7 +19,7 @@ public class BreakableWall : MonoBehaviour
         }
     }
 
-    private void DoorHealth()
+    public void DoorHealth()
     {
         //have Enemy lose a life 
         Health--;

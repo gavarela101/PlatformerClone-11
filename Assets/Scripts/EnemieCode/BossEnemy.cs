@@ -14,7 +14,7 @@ public class BossEnemy : MonoBehaviour
     public int Speed;
     public bool GoingLeft;
     public int Health = 10;
-    public int damage = 15;
+    public int damage = 35;
    
     public GameObject projectilePrefab;
     public float timeBetweenShots;

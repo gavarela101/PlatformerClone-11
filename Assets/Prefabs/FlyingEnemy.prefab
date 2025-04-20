@@ -44,7 +44,6 @@ GameObject:
   - component: {fileID: 1437317577858501073}
   - component: {fileID: 8270429393830549434}
   - component: {fileID: 1139200998386196908}
-  - component: {fileID: 8443901059908538270}
   m_Layer: 0
   m_Name: FlyingEnemy
   m_TagString: Untagged
@@ -156,18 +155,8 @@ MonoBehaviour:
   UpPoint: {fileID: 2631139557950705910}
   Speed: 3
   GoingDown: 0
---- !u!114 &8443901059908538270
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1392580750793062800}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 866459c357714f34a91877daa214462c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  Health: 1
+  damage: 10
 --- !u!1 &2631139557950705910
 GameObject:
   m_ObjectHideFlags: 0

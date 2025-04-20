@@ -15,6 +15,8 @@ public class PowerupBullets : MonoBehaviour
     {
         if (other.GetComponent<Player>())
         {
+            other.GetComponent<Player>().SwitchPrefabs();
+
             Destroy(gameObject);
         }
     }

@@ -9,14 +9,14 @@ using UnityEngine.SceneManagement;
  * Handles all coding for the basic enemy
 */
 
-public class EnemyMovement : MonoBehaviour
+public class BasicEnemy : MonoBehaviour
 {
     public GameObject LeftPoint;
     public GameObject RightPoint;
     public int Speed;
     public bool GoingLeft;
     public int Health = 1;
-    public int damage = 5; 
+    public int damage = 15;
 
     private Vector3 leftPos;
     private Vector3 rightPos;

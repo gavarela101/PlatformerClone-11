@@ -13,13 +13,15 @@ using UnityEngine.SceneManagement;
 public class Player : MonoBehaviour
 {
     public float Speed = 1f;
-    public float jumpForce = 9f;
+    public float jumpForce = 11f;
     public int maxHealth = 99;
     public int health = 99;
     public float projectileSpeed = 5f;
     public float fireRate = 0.5f;
+    public float killHeight = -6f;
 
     public GameObject LaserPre;
+    public GameObject HeavyLaserPre;
 
     private Vector2 shootingDirection;
     private float nextFireTime = 0f;
@@ -38,12 +40,12 @@ public class Player : MonoBehaviour
     }
     void Update()
     {
-        if (health <= 0)
-        {
-            SceneManager.LoadScene(2);
-        } 
-
         Jump();
+
+        if (transform.position.y <= killHeight)
+        {
+            Death();
+        }
 
         if (Time.time >= nextFireTime && Input.GetKeyDown(KeyCode.Space))
         {
@@ -79,6 +81,14 @@ public class Player : MonoBehaviour
         }
     }
 
+    private void Death()
+    {
+        if (health <= 0)
+        {
+            SceneManager.LoadScene(2);
+        }
+    }
+
     private bool OnGround()
     {
         bool onGround = false;
@@ -104,8 +114,8 @@ public class Player : MonoBehaviour
             shootingDirection = transform.right;
         }
 
-        GameObject projectile = Instantiate(LaserPre, transform.position, Quaternion.identity);
-
+        GameObject projectile = Instantiate(HeavyLaserPre, transform.position, Quaternion.identity);
+         
         Rigidbody projectileRigidbody = projectile.GetComponent<Rigidbody>();
 
         if (projectileRigidbody != null)
@@ -114,7 +124,12 @@ public class Player : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("Projectile prefab does not have a Rigidbody component.");
+            //null
         }
+    }
+
+    public void SwitchPrefabs()
+    {
+        GameObject newObject = Instantiate(HeavyLaserPre, transform.position, transform.rotation);
     }
 }
