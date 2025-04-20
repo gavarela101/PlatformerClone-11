@@ -26,15 +26,17 @@ public class Player : MonoBehaviour
     private Vector2 shootingDirection;
     private float nextFireTime = 0f;
     private float currentRotationY;
+    private GameObject bullet;
     private new Rigidbody rigidbody;
 
     void Start()
     {
         rigidbody = GetComponent<Rigidbody>();
         currentRotationY = transform.rotation.y;
+        bullet = LaserPre;
     }
 
-    void FixedUpdate()
+        void FixedUpdate()
     {
         Move();
     }
@@ -50,6 +52,7 @@ public class Player : MonoBehaviour
         if (Time.time >= nextFireTime && Input.GetKeyDown(KeyCode.Space))
         {
             Shoot();
+
             nextFireTime = Time.time + fireRate;
         }
 
@@ -114,7 +117,7 @@ public class Player : MonoBehaviour
             shootingDirection = transform.right;
         }
 
-        GameObject projectile = Instantiate(HeavyLaserPre, transform.position, Quaternion.identity);
+        GameObject projectile = Instantiate(bullet, transform.position, Quaternion.identity);
          
         Rigidbody projectileRigidbody = projectile.GetComponent<Rigidbody>();
 
@@ -122,7 +125,7 @@ public class Player : MonoBehaviour
         {
             projectileRigidbody.AddForce(shootingDirection * projectileSpeed, ForceMode.Impulse);
         }
-        else
+        else 
         {
             //null
         }
@@ -130,6 +133,6 @@ public class Player : MonoBehaviour
 
     public void SwitchPrefabs()
     {
-        GameObject newObject = Instantiate(HeavyLaserPre, transform.position, transform.rotation);
+        bullet = HeavyLaserPre;
     }
 }
