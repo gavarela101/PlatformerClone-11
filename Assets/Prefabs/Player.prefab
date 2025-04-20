@@ -231,6 +231,8 @@ MonoBehaviour:
   jumpForce: 9
   maxHealth: 99
   health: 99
+  goingLeft: 0
+  LaserPre: {fileID: 8789362296556596668, guid: 2f9f94c2225ebb0448ad06c91defbce0, type: 3}
 --- !u!54 &5211495364622100399
 Rigidbody:
   m_ObjectHideFlags: 0
